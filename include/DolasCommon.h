@@ -44,7 +44,6 @@
 #include <variant>
 #include <any>
 #include <map>
-#include "DolasBase.h"
 #include "Dolas.h"
 #include "DXTrace.h"
 using Microsoft::WRL::ComPtr;

@@ -1,9 +1,6 @@
 #ifndef WINDOWS_PLATFORM_H
 #define WINDOWS_PLATFORM_H
-#include <windows.h>
-#include <string>
-
-
+#include "DolasCommon.h"
 LRESULT CALLBACK
 MainWndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam);
 
@@ -57,6 +54,7 @@ public:
 
         return true;
     }
+    void Clear() override;
 
     int m_client_width = 0; // 客户区宽度
     int m_client_height = 0; // 客户区高度

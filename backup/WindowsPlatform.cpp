@@ -3,6 +3,13 @@
 LRESULT CALLBACK
 MainWndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
 {
+    // Forward hwnd on because we can get messages (e.g., WM_CREATE)
+    // before CreateWindow returns, and thus before m_hMainWnd is valid.
+    return g_dolas_context.m_windows_platform->MsgProc(hwnd, msg, wParam, lParam);
+}
+
+LRESULT WindowsPlatform::MsgProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
+{
     switch (msg)
     {
         // WM_ACTIVATE is sent when the window is activated or deactivated.  
