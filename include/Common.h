@@ -1,0 +1,49 @@
+#ifndef COMMON_H
+#define COMMON_H
+
+#include <d3d11.h>
+#include <d3dcompiler.h>
+#include <wrl/client.h> // Microsoft::WRL::ComPtr
+#include <string>
+#include <vector>
+#include <DirectXMath.h>
+#include <DirectXPackedVector.h>
+#include <DirectXColors.h>
+#include <windows.h>
+#include <cassert>
+#include <sstream>
+#include <iostream>
+#include <memory>
+#include <stdexcept>
+#include <algorithm>
+#include <functional>
+#include <utility>
+#include <cstdint>
+#include <cstddef>
+#include <type_traits>
+#include <initializer_list>
+#include <iterator>
+#include <limits>
+#include <string_view>
+#include <array>
+#include <unordered_map>
+#include <unordered_set>
+#include <variant>
+#include <optional>
+#include <thread>
+#include <future>
+#include <chrono>
+#include <mutex>
+#include <condition_variable>
+#include <atomic>
+#include <locale>
+#include <codecvt>
+#include <filesystem>
+#include <string_view>
+#include <format>
+#include <variant>
+#include <any>
+#include <map>
+using Microsoft::WRL::ComPtr;
+using namespace DirectX;
+#endif
