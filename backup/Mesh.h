@@ -4,7 +4,7 @@
 #include <string>
 #include <wrl/client.h>
 #include <DirectXMath.h>
-
+#include "VertexDeclaration.h"
 class Mesh
 {
 public:
@@ -28,7 +28,8 @@ public:
     void LoadFromFile(const std::string& filename); // 从文件加载网格数据
     
 private:
-    ComPtr<ID3D11InputLayout> m_input_layout; // 输入布局
+    // ComPtr<ID3D11InputLayout> m_input_layout; // 输入布局
+    VertexDeclaration m_vertex_declaration; // 顶点声明
     ComPtr<ID3D11Buffer> m_vertex_buffer; // 顶点缓冲区
     ComPtr<ID3D11Buffer> m_index_buffer; // 索引缓冲区
 

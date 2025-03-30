@@ -35,3 +35,9 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
     d3dcompiler.lib
 )
 
+# 添加着色器子项目
+add_subdirectory(shaders)
+# 依赖着色器编译目标
+add_dependencies(${PROJECT_NAME} 
+    CompileShadersHLSL
+)

@@ -6,15 +6,10 @@
 class GameApp : public D3DApp
 {
 public:
-    // 使用宏拼接 HLSL 文件路径
-    const std::wstring project_path = L"" PROJECT_ROOT_DIR;
-
-    
-
-    GameApp(HINSTANCE hInstance, const std::wstring& windowName, int initWidth, int initHeight);
+    GameApp();
     ~GameApp();
 
-    bool Init();
+    bool Init(HINSTANCE hInstance, const std::wstring& windowName, int initWidth, int initHeight);
     bool Clear();
     void OnResize();
     void UpdateScene(float dt);

@@ -25,13 +25,13 @@ bool GameApp::Init()
 {
     if (!D3DApp::Init())
         return false;
-        m_shader_manager->Initialize();
+    m_shader_manager->Initialize();
     return true;
 }
 
 bool GameApp::Clear()
 {
-    return m_shader_manager->Clear();
+    return true;
 }
 
 void GameApp::OnResize()
@@ -51,9 +51,9 @@ void GameApp::DrawScene()
 
     m_pd3dImmediateContext->OMSetRenderTargets(1, m_pRenderTargetView.GetAddressOf(), m_pDepthStencilView.Get());
     Mesh mesh;
-    mesh.GenerateSphere(1.0f, 10, 10);
+    // mesh.GenerateSphere(1.0f, 10, 10);
     ComPtr<ID3D11VertexShader> vertexShader;
-    mesh.Draw(m_pd3dImmediateContext.Get());
+    // mesh.Draw(m_pd3dImmediateContext.Get());
 
     HR(m_pSwapChain->Present(0, 0));
 }

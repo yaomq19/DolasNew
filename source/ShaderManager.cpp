@@ -1,6 +1,6 @@
 #include "ShaderManager.h"
 
-ComPtr<ID3D11VertexShader> ShaderManager::GetDefaultVertexShader(const std::string& shaderName)
+ComPtr<ID3D11VertexShader> ShaderManager::GetVertexShader(const std::string& shaderName)
 {
     auto it = m_default_vertex_shaders.find(shaderName);
     if (it != m_default_vertex_shaders.end())
@@ -10,7 +10,7 @@ ComPtr<ID3D11VertexShader> ShaderManager::GetDefaultVertexShader(const std::stri
     return nullptr;
 }
 
-ComPtr<ID3D11PixelShader> ShaderManager::GetDefaultPixelShader(const std::string& shaderName)
+ComPtr<ID3D11PixelShader> ShaderManager::GetPixelShader(const std::string& shaderName)
 {
     auto it = m_default_pixel_shaders.find(shaderName);
     if (it != m_default_pixel_shaders.end())
@@ -20,7 +20,7 @@ ComPtr<ID3D11PixelShader> ShaderManager::GetDefaultPixelShader(const std::string
     return nullptr;
 }
 
-bool ShaderManager::initialize()
+bool ShaderManager::Initialize()
 {
-    
+    return true;
 }

@@ -1,5 +1,5 @@
-#ifndef COMMON_H
-#define COMMON_H
+#ifndef DOLAS_COMMON_H
+#define DOLAS_COMMON_H
 
 #include <d3d11.h>
 #include <d3dcompiler.h>
@@ -44,6 +44,9 @@
 #include <variant>
 #include <any>
 #include <map>
+#include "DolasBase.h"
+#include "Dolas.h"
+#include "DXTrace.h"
 using Microsoft::WRL::ComPtr;
 using namespace DirectX;
 #endif
