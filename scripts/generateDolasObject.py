@@ -46,10 +46,10 @@ void {className}::Clear()
 """
 
     # 写入文件
-    with open(f"{className}.h", "w") as h_file:
+    with open(f"../include/{className}.h", "w") as h_file:
         h_file.write(h_content)
     
-    with open(f"{className}.cpp", "w") as cpp_file:
+    with open(f"../source/{className}.cpp", "w") as cpp_file:
         cpp_file.write(cpp_content)
 
 # 示例使用
